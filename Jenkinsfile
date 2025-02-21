@@ -3,6 +3,11 @@ pipeline {
     stages {
         stage('build') {
             steps {
+                sh 'echo "Welcome to Jenkins!"'
+                sh '''
+                    echo "Multiline shell steps works too! Cool right?"
+                    ls -lah
+                '''
                 sh 'python --version'
             }
         }
